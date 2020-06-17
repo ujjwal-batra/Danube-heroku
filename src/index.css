@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container{
+  width: 70%;
+  margin: 0 auto;
+}
+.header{
+  text-align: center;
+  letter-spacing: 1.1rem;
+  margin-top: 4rem;
+}
+
+.header h1{
+  font-weight: 800;
+}
+
+.header h3{
+  font-weight: 400;
+  color: rgb(132, 132, 255);
+}
+
+.homeform{
+  display: flexbox;
+  width: 40%;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media(max-width: 1040px){
+  .homeform{
+    width: 55%;
+  }
+}
+
+@media(max-width: 750px){
+  .content{
+    display: block!important;
+  }
+
+  .homeform{
+    width: 100%;
+  }
+
+  .content img{
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+    max-width: 60%;
+  }
+}
+
+@media(max-width: 405px){
+  .homeform div input{
+    padding: 0;
+  }
+
+  .homeform{
+    font-size: 1rem;
+  }
+}
+
+.homeform input{
+  padding: 5px;
+}
+
+.homeform div{
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 5px;
+  width: 100%;
+}
+.coloumn{
+  
+}
+.homeform button{
+  display: block;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  background-color: rgb(154, 154, 255);
+  color: white;
+  margin: 10px auto;
+}
+
+.homeform label{
+  padding-right: 20px;
+}
+
+input, select{
+  border: none;
+  border: 2px solid blue;
+  border-radius: 10px;
+}
+select{
+  width: 40%;
+}
+img{
+  max-width: 40%;
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.coursedisplay{
+  display: flexbox;
+}
+
+.singlecourse{
+  padding: 10px 0;
+  background-color: rgb(233, 233, 233);
+  display: flexbox;
+  justify-content: center;
+  width: 30%;
+  margin: 1.66%;
+  float: left;
+}
+
+.singlecourse h1,.price{
+  margin: 10px auto;
+  color: rgb(101, 101, 255);
+  font-size: 1.2rem;
+}
+
+.singlecourse div,h1{
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.singlecourse div,.price{
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.date{
+  margin-top: 20px;
+  color: grey;
+}
+
+.courseform{
+  width: 100%;
+  margin: 5rem auto;
+  display: flexbox;
+  justify-content: space-between;
+}
+
+.courseform div{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.courseform input,label{
+  padding: 5px;
+}
+
+.courseform{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media(max-width: 920px){
+  .courseform{
+    width: 100%;
+  }
+
+  .singlecourse div input{
+    margin: 0;
+  }
+}
+
+@media(max-width: 870px){
+  .singlecourse{
+    width: 40%;
+    margin: 5%;
+    display: flexbox;
+  }
+}
+
+@media(max-width: 610px){
+  .singlecourse{
+    width: 80%;
+    margin: 10%;
+    display: flexbox;
+  }
+
+  .container{
+    width: 90%;
+  }
+}
+
+@media(max-width: 440px){
+  .courseform input,label{
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0;
+  }
+}
