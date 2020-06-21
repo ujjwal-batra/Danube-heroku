@@ -22,11 +22,11 @@ class Courseform extends Component {
                         </div>
 
                         <div className='coloumn'>
-                            <label>Country of destination</label>
+                            <label>gender</label>
                             <input type="text" />
-                            <label>Country of destination</label>
+                            <label>Age</label>
                             <input type="text" />
-                            <label>Country of destination</label>
+                            <label>Visa Type</label>
                             <input type="text" />
                         </div>
                     </form>
