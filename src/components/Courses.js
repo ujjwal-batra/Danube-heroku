@@ -7,8 +7,6 @@ class Courses extends Component {
             <div>
                 <div className="coursedisplay">
                     <Singlecourse />
-                    <Singlecourse />
-                    <Singlecourse />
                 </div>
             </div>
         );

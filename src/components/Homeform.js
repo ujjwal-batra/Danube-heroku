@@ -2,16 +2,44 @@ import React, { Component } from 'react';
 import { Router,Link } from 'react-router-dom';
 import MapChart from "./MapChart";
 
+
 class Homeform extends Component {
     constructor(props) {
         super(props);
-        this.state = {from: '', to: 'USA'};
-        console.log(props);
+        this.state = {
+            // fromx: '',
+            from: {
+                firs: "",
+                sec: ""
+            },
+        };
+        console.log(this.state);
         this.handleChange = this.handleChange.bind(this);
+        // this.handleChange2 = this.handleChange2.bind(this);
     }
-    handleChange = ({ target }) => {
-        this.setState({ [target.name]: target.value });
-     };
+
+    handleChange (evt) {
+        console.log(evt.target.name);
+        // var str = this.state.from + evt.target.value;
+        var str = this.state.from;
+        var n = evt.target.id.localeCompare("first");
+        // var n = 0;
+        if(n == 0){
+            var from = {...this.state.from}
+            from.firs = evt.target.value;
+            this.setState({from})
+        }
+        else{
+            var from = {...this.state.from}
+            from.sec = evt.target.value;
+            this.setState({from})
+        }
+        // this.setState({ [evt.target.name]: str });
+      }
+    //   setCharAt(str,index,chr) {
+    //     if(index > str.length-1) return str;
+    //     return str.substr(0,index) + chr + str.substr(index+1);
+    // }
 
     render() { 
         return (
@@ -25,7 +53,7 @@ class Homeform extends Component {
                         <form className="homeform">
                             <div>
                                 <label>Country of origin</label>
-                                <select id="country" name="from" value={this.state.from} onChange={this.handleChange}>
+                                <select id="first" name="from" onChange={this.handleChange}>
                                     <option value="AFG">Afghanistan</option>
                                     <option value="ALA">Åland Islands</option>
                                     <option value="ALB">Albania</option>
@@ -280,7 +308,7 @@ class Homeform extends Component {
                             
                             <div>
                                 <label>Country of destination</label>
-                                <select id="country" name="to" value={this.state.to} onChange={this.handleChange}>
+                                <select id="second" name="from" onChange={this.handleChange}>
                                     <option value="AFG">Afghanistan</option>
                                     <option value="ALA">Åland Islands</option>
                                     <option value="ALB">Albania</option>
@@ -538,7 +566,12 @@ class Homeform extends Component {
                             </div>
                             <div>
                                 <label>Gender</label>
-                                <input type="text" />
+                                <select>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                    <option>Do not specify</option>
+                                </select>
                             </div>
                             <div>
                                 <label>Visa Type</label>

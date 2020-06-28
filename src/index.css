@@ -4,8 +4,8 @@ svg {
 }
 .black{
   /* background-color: black; */
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
 }
 body {
   margin: 0;
@@ -217,4 +217,16 @@ img{
     font-weight: 400;
     padding: 0;
   }
+}
+
+.star{
+  color: #F4E55D;
+  font-size: 20px;
+}
+.coloumn{
+  display: flex;
+  flex-wrap: wrap;
+}
+.coloumn span{
+  flex: 1;
 }
