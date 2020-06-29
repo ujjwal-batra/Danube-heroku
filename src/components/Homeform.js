@@ -54,6 +54,7 @@ class Homeform extends Component {
                             <div>
                                 <label>Country of origin</label>
                                 <select id="first" name="from" onChange={this.handleChange}>
+                                    <option value="">Select country</option>
                                     <option value="AFG">Afghanistan</option>
                                     <option value="ALA">Åland Islands</option>
                                     <option value="ALB">Albania</option>
@@ -309,6 +310,7 @@ class Homeform extends Component {
                             <div>
                                 <label>Country of destination</label>
                                 <select id="second" name="from" onChange={this.handleChange}>
+                                    <option value="">Select country</option>
                                     <option value="AFG">Afghanistan</option>
                                     <option value="ALA">Åland Islands</option>
                                     <option value="ALB">Albania</option>
