@@ -3,33 +3,89 @@ import React, { Component } from 'react';
 class Singlecourse extends Component {
     render() { 
         return (
-            <div>
+            <div className="flexBox-courses">
                 <div className="singlecourse">
-                    <h1>Law and Order</h1>
-                    <div>30 min <i className="far fa-clock"></i> </div>
-                    <div>Test at the end</div>
-
-                    <div><span className="star">&#9733;&#9733;&#9733;&#9733;&#9734; </span> Stars</div>
-                    <div className="price">4.99$</div>
-                    <div className="date">Last Updated: <span>09/2019</span> </div>
+                    <div class="product-card">
+                        <div class="badge product-links">
+                            <a href=""><i class="fa fa-heart"></i></a>
+                            <a href=""><i class="fa fa-shopping-cart"></i></a> 
+                        </div>
+                        <div class="product-tumb">
+                            <img src="https://image.flaticon.com/icons/svg/1301/1301175.svg" height="200px" />
+                        </div>
+                        <div class="product-details">
+                            <h4><a href="">LAW AND ORDER</a></h4>
+                            <p><i className="fa fa-asterisk"/> Test at End <br/> Time duration <i class="fa fa-clock-o" /> : 30 min <br/> Last updated <i className="fa fa-calendar"/> : 02/2019</p>
+                            <div className="product-bottom-details">
+                                <div class="product-price">
+                                    $4.99
+                                </div>
+                                <div class="product-links product-price">
+                                    <i className="fa fa-star"/>
+                                    <i className="fa fa-star"/>
+                                    <i className="fa fa-star"/>
+                                    <i className="fa fa-star"/>
+                                    <i className="fa fa-star-half-o"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
                 <div className="singlecourse">
-                    <h1>Culture</h1>
-                    <div>30 min <i className="far fa-clock"></i> </div>
-                    <div>Test at the end</div>
-
-                    <div><span className="star">&#9733;&#9733;&#9734;&#9734;&#9734; </span> Stars</div>
-                    <div className="price">2.99$</div>
-                    <div className="date">Last Updated: <span>09/2019</span> </div>
+                    <div class="product-card">
+                        <div class="badge product-links">
+                            <a href=""><i class="fa fa-heart"></i></a>
+                            <a href=""><i class="fa fa-shopping-cart"></i></a> 
+                        </div>
+                        <div class="product-tumb">
+                            <img src="https://angiegreaves.com/wp-content/uploads/2019/05/Diversity.png" height="200px" />
+                        </div>
+                        <div class="product-details">
+                            <h4><a href="">CULTURE</a></h4>
+                            <p><i className="fa fa-asterisk"/> Test at End <br/> Time duration <i class="fa fa-clock-o" /> : 30 min <br/> Last updated <i className="fa fa-calendar"/> : 12/2019</p>
+                            <div className="product-bottom-details">
+                                <div class="product-price">
+                                    $2.99
+                                </div>
+                                <div class="product-links product-price">
+                                    <i className="fa fa-star"/>
+                                    <i className="fa fa-star"/>
+                                    <i className="fa fa-star"/>
+                                    <i className="fa fa-star-half-o"/>
+                                    <i className="fa fa-star-o"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="singlecourse">
-                    <h1>Docs Checklist</h1>
-                    <div>30 min <i className="far fa-clock"></i> </div>
-                    <div>Test at the end</div>
 
-                    <div><span className="star">&#9733;&#9733;&#9733;&#9734;&#9734; </span> Stars</div>
-                    <div className="price">1.99$</div>
-                    <div className="date">Last Updated: <span>09/2019</span> </div>
+                <div className="singlecourse">
+                    <div class="product-card">
+                        <div class="badge product-links">
+                            <a href=""><i class="fa fa-heart"></i></a>
+                            <a href=""><i class="fa fa-shopping-cart"></i></a> 
+                        </div>
+                        <div class="product-tumb">
+                            <img src="https://image.flaticon.com/icons/svg/2472/2472852.svg" height="200px"/>
+                        </div>
+                        <div class="product-details">
+                            <h4><a href="">DOCKS CHECKLIST</a></h4>
+                            <p><i className="fa fa-asterisk"/> Test at End <br/> Time duration <i class="fa fa-clock-o" /> : 40 min <br/> Last updated <i className="fa fa-calendar"/> : 08/2019</p>
+                            <div className="product-bottom-details">
+                                <div class="product-price">
+                                    $4.99
+                                </div>
+                                <div class="product-links product-price">
+                                    <i className="fa fa-star"/>
+                                    <i className="fa fa-star"/>
+                                    <i className="fa fa-star"/>
+                                    <i className="fa fa-star"/>
+                                    <i className="fa fa-star-o"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         );

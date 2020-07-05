@@ -7,7 +7,6 @@ class Homeform extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // fromx: '',
             from: {
                 firs: "",
                 sec: ""
@@ -15,7 +14,6 @@ class Homeform extends Component {
         };
         console.log(this.state);
         this.handleChange = this.handleChange.bind(this);
-        // this.handleChange2 = this.handleChange2.bind(this);
     }
 
     handleChange (evt) {
@@ -34,12 +32,7 @@ class Homeform extends Component {
             from.sec = evt.target.value;
             this.setState({from})
         }
-        // this.setState({ [evt.target.name]: str });
       }
-    //   setCharAt(str,index,chr) {
-    //     if(index > str.length-1) return str;
-    //     return str.substr(0,index) + chr + str.substr(index+1);
-    // }
 
     render() { 
         return (
@@ -564,11 +557,11 @@ class Homeform extends Component {
                             </div>
                             <div>
                                 <label>Age</label>
-                                <input type="Number" />
+                                <input type="Number" min="0" required />
                             </div>
                             <div>
                                 <label>Gender</label>
-                                <select>
+                                <select required>
                                     <option>Male</option>
                                     <option>Female</option>
                                     <option>Others</option>
@@ -577,7 +570,7 @@ class Homeform extends Component {
                             </div>
                             <div>
                                 <label>Visa Type</label>
-                                <input type="text" />
+                                <input type="text" required/>
                             </div>
                             
                             <button><Link to={"/course"}>SEE COURSES</Link></button>
