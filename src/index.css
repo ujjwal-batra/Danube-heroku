@@ -110,9 +110,9 @@ body {
   border-top: 1px solid #eee;
   padding-top: 20px;
 }
-.coloumn span{
+/* .coloumn div{
   flex: 1;
-}
+} */
 
 .homeform button{
   display: block;

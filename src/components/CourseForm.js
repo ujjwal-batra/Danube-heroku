@@ -11,14 +11,16 @@ class Courseform extends Component {
                 <h1 className="header">DANUBE</h1>
                 <div>
                     <form className="courseform">
-                        <div>
-                            <label>Country of origin</label>
-                            <input type="text" />
-                        </div>
-                        
-                        <div>
-                            <label>Country of destination</label>
-                            <input type="text" />
+                        <div className="coloumn">
+                            <div>
+                                <label>Country of origin</label>
+                                <input type="text" />
+                            </div>
+                            
+                            <div>
+                                <label>Country of destination</label>
+                                <input type="text" />
+                            </div>
                         </div>
                         <div className='coloumn'>
                             <div>    

@@ -14,7 +14,7 @@ class Singlecourse extends Component {
                             <img src="https://image.flaticon.com/icons/svg/1301/1301175.svg" height="200px" />
                         </div>
                         <div class="product-details">
-                            <h4><a href="">LAW AND ORDER</a></h4>
+                            <h4><a href="">LAWS AND ORDER</a></h4>
                             <p><i className="fa fa-asterisk"/> Test at End <br/> Time duration <i class="fa fa-clock-o" /> : 30 min <br/> Last updated <i className="fa fa-calendar"/> : 02/2019</p>
                             <div className="product-bottom-details">
                                 <div class="product-price">
@@ -70,7 +70,7 @@ class Singlecourse extends Component {
                             <img src="https://image.flaticon.com/icons/svg/2472/2472852.svg" height="200px"/>
                         </div>
                         <div class="product-details">
-                            <h4><a href="">DOCKS CHECKLIST</a></h4>
+                            <h4><a href="">DOCS CHECKLIST</a></h4>
                             <p><i className="fa fa-asterisk"/> Test at End <br/> Time duration <i class="fa fa-clock-o" /> : 40 min <br/> Last updated <i className="fa fa-calendar"/> : 08/2019</p>
                             <div className="product-bottom-details">
                                 <div class="product-price">
