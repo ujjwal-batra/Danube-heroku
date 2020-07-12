@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
-svg {
-  display: inline-block;
-  vertical-align: middle;
-}
-.black{
-  /* background-color: black; */
-  width: 60%;
-  height: 60%;
-}
+/* initial styling to all */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -16,9 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
-
 .container{
   width: 70%;
   margin: 0 auto;
@@ -37,7 +27,34 @@ body {
   font-weight: 400;
   color: rgb(132, 132, 255);
 }
+input, select{
+  border: none;
+  border: 2px solid blue;
+  border-radius: 7px;
+}
+select{
+  width: 40%;
+}
+input{
+  width: 37%;
+}
+img{
+  max-width: 40%;
+}
+/* initial styling ends */
 
+/* map styling starts */
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+.Maps{
+  width: 60%;
+  height: 60%;
+}
+/* map styling ends */
+
+/* Home form styling starts */
 .homeform{
   display: flexbox;
   width: 40%;
@@ -46,53 +63,11 @@ body {
   font-weight: 600;
 }
 
-@media(max-width: 1040px){
-  .homeform{
-    width: 55%;
-  }
-  .black{
-    /* background-color: black; */
-    width: 60%;
-    height: 60%;
-  }
-}
-
-@media(max-width: 750px){
-  .content{
-    display: block!important;
-  }
-  .black{
-    /* background-color: black; */
-    width: 100%;
-    height: 100%;
-  }
-  .homeform{
-    width: 100%;
-  }
-
-  .content img{
-    display: block;
-    margin: 50px auto;
-    text-align: center;
-    max-width: 60%;
-  }
-}
-
-@media(max-width: 405px){
-  .homeform div input{
-    padding: 0;
-  }
-  .black{
-    /* background-color: black; */
-    width: 100%;
-    height: 100%;
-  }
-  .homeform{
-    font-size: 1rem;
-  }
-}
-
 .homeform input{
+  padding: 5px;
+}
+
+.homeform select{
   padding: 5px;
 }
 
@@ -103,21 +78,11 @@ body {
   padding: 5px;
   width: 100%;
 }
-.coloumn{
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-  padding-top: 20px;
-}
-/* .coloumn div{
-  flex: 1;
-} */
 
 .homeform button{
   display: block;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 10px 20px;
   background-color: rgb(154, 154, 255);
   color: white;
@@ -128,25 +93,47 @@ body {
   padding-right: 20px;
 }
 
-input, select{
-  border: none;
-  border: 2px solid blue;
-  border-radius: 10px;
-}
-select{
-  width: 40%;
-}
-img{
-  max-width: 40%;
-}
-
 .content{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 4rem;
 }
+/* Homeform styling ends */
 
+
+/* course form styling starts */
+.coloumn{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+.courseform{
+  width: 100%;
+  margin: 5rem auto;
+  display: flexbox;
+  justify-content: space-between;
+}
+
+.courseform div{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.courseform input,label{
+  padding: 5px;
+}
+
+.courseform{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+/* courses form styling ends */
+
+
+/* courses cards styling starts*/
 .flexBox-courses{
   display: flex;
   flex-wrap: wrap;
@@ -273,49 +260,54 @@ img{
 .product-links a:hover {
   color: #fbb72c;
 }
+/* courses card styling ends */
 
-/*
-.singlecourse h1,.price{
-  margin: 10px auto;
-  color: rgb(101, 101, 255);
-  font-size: 1.2rem;
+
+/* media queries for responsiveness */
+@media(max-width: 1040px){
+  .homeform{
+    width: 55%;
+  }
+  .black{
+    width: 60%;
+    height: 60%;
+  }
 }
 
-.singlecourse div,h1{
-  width: 80%;
-  margin: 10px auto;
-  display: flex;
-  justify-content: center;
+@media(max-width: 750px){
+  .content{
+    display: block!important;
+  }
+  .black{
+    width: 100%;
+    height: 100%;
+  }
+  .homeform{
+    width: 100%;
+  }
+
+  .content img{
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+    max-width: 60%;
+  }
 }
 
-.singlecourse div,.price{
-  font-weight: 600;
-  font-size: 1.05rem;
-}
-.date{
-  margin-top: 20px;
-  color: grey;
-} */
-
-.courseform{
-  width: 100%;
-  margin: 5rem auto;
-  display: flexbox;
-  justify-content: space-between;
-}
-
-.courseform div{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-.courseform input,label{
-  padding: 5px;
-}
-
-.courseform{
-  font-size: 1.2rem;
-  font-weight: 600;
+@media(max-width: 405px){
+  .homeform div input{
+    padding: 0;
+  }
+  .homeform div select{
+    padding: 0;
+  }
+  .black{
+    width: 100%;
+    height: 100%;
+  }
+  .homeform{
+    font-size: 1rem;
+  }
 }
 
 @media(max-width: 920px){
@@ -355,15 +347,4 @@ img{
     padding: 0;
   }
 }
-
-.star{
-  color: #F4E55D;
-  font-size: 20px;
-}
-.coloumn{
-  display: flex;
-  flex-wrap: wrap;
-}
-.coloumn span{
-  flex: 1;
-}
+/* media queries ends */

@@ -1,5 +1,7 @@
+// course form (CoursePage)
 import React, { Component } from 'react';
 import Courses from './Courses'
+
 class Courseform extends Component {
     constructor(props) {
         super(props);

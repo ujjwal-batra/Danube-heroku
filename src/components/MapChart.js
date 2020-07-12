@@ -1,20 +1,18 @@
+// maps component using react simple maps
 import React from "react";
 import {
   ComposableMap,
   Geographies,
   Geography,
-  Graticule,
   Line,
-  Sphere
 } from "react-simple-maps";
 import { PatternLines } from "@vx/pattern";
-// const from = this.props.from;
+
+// mas geo data json format
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-// https://www.worldatlas.com/articles/top-coffee-producing-countries.html
-
-
+// call it if want to show latitude and longitude lines. 
 function generateCircle(deg) {
   if (!deg) return [[-180, 0], [-90, 0], [0, 0], [90, 0], [180, 0]];
   return new Array(361).fill(1).map((d, i) => {
@@ -23,72 +21,78 @@ function generateCircle(deg) {
 }
 
 const MapChart = (props) => {
+
+  // searching for the lat and log for the country of origin and country of destination.
   var search1 = props.from.firs;
-  var lat = [];
-  var lon = [];
+  var search2 = props.from.sec;
+  var lat = [], lon = [], lat1 = [], lon1 = [];
+
   for (var i=0 ; i < coordinates.length ; i++)
   {
     if (coordinates[i].alpha3 == search1) {
         lat.push(coordinates[i].latit);
         lon.push(coordinates[i].longit)
     }
-  }
-  var search2 = props.from.sec;
-  var lat1 = [];
-  var lon1 = [];
-  for (var i=0 ; i < coordinates.length ; i++)
-  {
     if (coordinates[i].alpha3 == search2) {
-        lat1.push(coordinates[i].latit);
-        lon1.push(coordinates[i].longit)
+      lat1.push(coordinates[i].latit);
+      lon1.push(coordinates[i].longit)
     }
   }
   return (
+    // react-simple-map starts
     <ComposableMap projection="geoEqualEarth">
       <PatternLines
         id="lines"
-        height={6}
-        width={6}
+        height={3}
+        width={3}
         stroke="#000"
-        strokeWidth={2}
-        background="blue"
+        strokeWidth={.2}
+        background="#658EA9"
         orientation={["diagonal"]}
       />
-      {/* <Sphere stroke="#000" /> */}
-      {/* <Graticule stroke="#DDD" /> */}
-      <Geographies geography={geoUrl} stroke="#000" strokeWidth={0.5}>
+      <PatternLines
+        id="lines1"
+        height={3}
+        width={3}
+        stroke="#000"
+        strokeWidth={.2}
+        background="#E98973"
+        orientation={["diagonal"]} 
+      />
+      <Geographies geography={geoUrl} stroke="#000" fill="#F6F0E9" strokeWidth={0.5}>
         {({ geographies }) =>
           geographies.map(geo => {
-
-              console.log(props.from);
-
-            const highlighted = [
-                props.from.firs,
-                props.from.sec
-            ];
-            const isHighlighted =
-              highlighted.indexOf(geo.properties.ISO_A3) !== -1;
+            
+            // highlight the selected country 
+            const highlighted = [ props.from.firs ];
+            const highlighted1 = [ props.from.sec ];
+            const isHighlighted = highlighted.indexOf(geo.properties.ISO_A3) !== -1;
+            const isHighlighted1 = highlighted1.indexOf(geo.properties.ISO_A3) !== -1;
             return (
               <Geography
                 key={geo.rsmKey}
                 geography={geo}
-                fill={isHighlighted ? "url('#lines')" : "#F6F0E9"}
+                fill={isHighlighted ? "url('#lines')" : isHighlighted1 ? "url(#lines1)" : ""}
                 onClick={() => console.log(geo.properties.ISO_A3)}
               />
             );
           })
         }
       </Geographies>
+      
+      {/* connect lines between the countries selected */}
       <Line 
         from={[lon, lat]}
         to={[lon1,lat1]}
         stroke="#FF5533"
-        strokeWidth={4}
+        strokeWidth={2}
         strokeLinecap="round"
       />
     </ComposableMap>
   );
 };
+
+// json data used for the co-ordinates of countries(lat and long with ISO_3 code).
 var coordinates = [
   {"\"Country\"":"Afghanistan","\"Alpha-2code\"":"AF","alpha3":"AFG","\"Numericcode\"":"4","latit":"33","longit":"65"},
   {"\"Country\"":"Albania","\"Alpha-2code\"":"AL","alpha3":"ALB","\"Numericcode\"":"8","latit":"41","longit":"20"},

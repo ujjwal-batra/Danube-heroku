@@ -1,3 +1,4 @@
+// home form and map component
 import React, { Component } from 'react';
 import { Router,Link } from 'react-router-dom';
 import MapChart from "./MapChart";
@@ -17,11 +18,9 @@ class Homeform extends Component {
     }
 
     handleChange (evt) {
-        console.log(evt.target.name);
-        // var str = this.state.from + evt.target.value;
-        var str = this.state.from;
+        // updating the prop for country of origin and destination 
+        // by comparing id for the select tag.
         var n = evt.target.id.localeCompare("first");
-        // var n = 0;
         if(n == 0){
             var from = {...this.state.from}
             from.firs = evt.target.value;
@@ -44,6 +43,7 @@ class Homeform extends Component {
                 <div className="container">
                     <div className="content">
                         <form className="homeform">
+                            {/* origin */}
                             <div>
                                 <label>Country of origin</label>
                                 <select id="first" name="from" onChange={this.handleChange}>
@@ -299,7 +299,7 @@ class Homeform extends Component {
                                     <option value="ZWE">Zimbabwe</option>
                                 </select>
                             </div>
-                            
+                            {/* destination */}
                             <div>
                                 <label>Country of destination</label>
                                 <select id="second" name="from" onChange={this.handleChange}>
@@ -555,6 +555,7 @@ class Homeform extends Component {
                                     <option value="ZWE">Zimbabwe</option>
                                 </select>
                             </div>
+
                             <div>
                                 <label>Age</label>
                                 <input type="Number" min="0" required />
@@ -573,10 +574,12 @@ class Homeform extends Component {
                                 <input type="text" required/>
                             </div>
                             
-                            <button><Link to={"/course"}>SEE COURSES</Link></button>
+                            {/* link to courses component */}
+                            <button><Link style={{textDecoration: 'none', color: 'black', fontWeight:'600'}} to={"/course"}>SEE COURSES</Link></button>
                         </form>
-                        {/* <h3>Your username is: {this.state.from}</h3> */}
-                        <div className="black">
+
+                        {/* map Component */}
+                        <div className="Maps">
                             <MapChart from={this.state.from}/>
                         </div>
                         
