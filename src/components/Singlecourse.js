@@ -5,7 +5,6 @@ class Singlecourse extends Component {
     render() { 
         return (
             <div className="flexBox-courses">
-                {/* single Card 1 */}
                 <div className="singlecourse">
                     <div class="product-card">
                         <div class="badge product-links">
@@ -33,7 +32,7 @@ class Singlecourse extends Component {
                         </div>
                     </div>
                 </div>
-                {/* single card 2 */}
+
                 <div className="singlecourse">
                     <div class="product-card">
                         <div class="badge product-links">
@@ -61,7 +60,7 @@ class Singlecourse extends Component {
                         </div>
                     </div>
                 </div>
-                {/* single card 3 */}
+                
                 <div className="singlecourse">
                     <div class="product-card">
                         <div class="badge product-links">

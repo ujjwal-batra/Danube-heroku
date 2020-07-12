@@ -1,4 +1,3 @@
-// courses card component
 import React, { Component } from 'react';
 import Singlecourse from './Singlecourse';
 

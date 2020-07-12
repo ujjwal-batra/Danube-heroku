@@ -1,4 +1,3 @@
-// parent component for courses
 import React, { Component } from 'react';
 import Courseform from './components/CourseForm';
 

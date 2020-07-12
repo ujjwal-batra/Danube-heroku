@@ -43,7 +43,7 @@ class Homeform extends Component {
                 <div className="container">
                     <div className="content">
                         <form className="homeform">
-                            {/* origin */}
+                            
                             <div>
                                 <label>Country of origin</label>
                                 <select id="first" name="from" onChange={this.handleChange}>
@@ -299,7 +299,7 @@ class Homeform extends Component {
                                     <option value="ZWE">Zimbabwe</option>
                                 </select>
                             </div>
-                            {/* destination */}
+                            
                             <div>
                                 <label>Country of destination</label>
                                 <select id="second" name="from" onChange={this.handleChange}>
@@ -574,11 +574,9 @@ class Homeform extends Component {
                                 <input type="text" required/>
                             </div>
                             
-                            {/* link to courses component */}
                             <button><Link style={{textDecoration: 'none', color: 'black', fontWeight:'600'}} to={"/course"}>SEE COURSES</Link></button>
                         </form>
 
-                        {/* map Component */}
                         <div className="Maps">
                             <MapChart from={this.state.from}/>
                         </div>

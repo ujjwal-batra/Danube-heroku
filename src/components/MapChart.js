@@ -21,8 +21,6 @@ function generateCircle(deg) {
 }
 
 const MapChart = (props) => {
-
-  // searching for the lat and log for the country of origin and country of destination.
   var search1 = props.from.firs;
   var search2 = props.from.sec;
   var lat = [], lon = [], lat1 = [], lon1 = [];
@@ -39,7 +37,6 @@ const MapChart = (props) => {
     }
   }
   return (
-    // react-simple-map starts
     <ComposableMap projection="geoEqualEarth">
       <PatternLines
         id="lines"
@@ -63,7 +60,6 @@ const MapChart = (props) => {
         {({ geographies }) =>
           geographies.map(geo => {
             
-            // highlight the selected country 
             const highlighted = [ props.from.firs ];
             const highlighted1 = [ props.from.sec ];
             const isHighlighted = highlighted.indexOf(geo.properties.ISO_A3) !== -1;
@@ -80,7 +76,6 @@ const MapChart = (props) => {
         }
       </Geographies>
       
-      {/* connect lines between the countries selected */}
       <Line 
         from={[lon, lat]}
         to={[lon1,lat1]}
@@ -92,7 +87,6 @@ const MapChart = (props) => {
   );
 };
 
-// json data used for the co-ordinates of countries(lat and long with ISO_3 code).
 var coordinates = [
   {"\"Country\"":"Afghanistan","\"Alpha-2code\"":"AF","alpha3":"AFG","\"Numericcode\"":"4","latit":"33","longit":"65"},
   {"\"Country\"":"Albania","\"Alpha-2code\"":"AL","alpha3":"ALB","\"Numericcode\"":"8","latit":"41","longit":"20"},

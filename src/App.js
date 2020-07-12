@@ -8,12 +8,11 @@ import Course from './Coursepage'
 function App() {
   return (
     <div className="App">
-      {/* HomePage */}
       <Route path="/" exact render={props => (
         <Home />
       )}/>
 
-      {/* CoursePage */}
+
       <Route path="/course" exact render={props => (
         <Course />
       )}/>
